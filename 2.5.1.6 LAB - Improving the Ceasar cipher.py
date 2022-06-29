@@ -30,10 +30,10 @@ for char in cipher:
         continue
     code = ord(char) + shift  # letter shift
     if 65 <= ord(char) <= 90:  # check letter if it is capital
-        if code > 90:  # if shifted letter is out of upper-case letters range, substract 26 to return in range (cycle)
+        if code > 90:  # if shifted letter is out of upper-case letters range, subtract 26 to return in range (cycle)
             code -= 26
     elif 97 <= ord(char) <= 122:  # check letter if it is lower-case
-        if code > 122:  # if shifted letter is out of lower-case letters range, substract 26 to return in range (cycle)
+        if code > 122:  # if shifted letter is out of lower-case letters range, subtract 26 to return in range (cycle)
             code -= 26
     text += chr(code)
 print(text)
