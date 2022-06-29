@@ -27,15 +27,16 @@ for char in user_text:
         user_text_without_spaces += char
 lst = []
 for i in user_text_without_spaces.upper():
+    # Convert all characters to upper case and add corresponding ASCII number into the list
     lst.append(ord(i))
-inversed_lst = lst[-1::-1]
-pali = True
+
+inversed_lst = lst[-1::-1] #Creating inverted list.
+palindrome = True
 for i in range(len(user_text_without_spaces) // 2):
     if lst[i] != inversed_lst[i]:
+        # compare 2 lists' elements if they are the same.
         print("It's not a palindrome")
         pali = False
         break
-if pali:
+if palindrome:
     print("It's a palindrome")
-
-
