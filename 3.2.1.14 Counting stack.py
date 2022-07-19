@@ -35,26 +35,23 @@ class Stack:
 
 class CountingStack(Stack):
     def __init__(self):
+        # Fill the constructor with appropriate actions.
         Stack.__init__(self)
         self.__counter = 0
 
-    #
-    # Fill the constructor with appropriate actions.
-    #
+
 
     def get_counter(self):
+        # Present the counter's current value to the world.
         return self.__counter
 
-    #
-    # Present the counter's current value to the world.
-    #
+
 
     def pop(self):
+        # Do pop and update the counter.
         self.__counter += 1
         return Stack.pop(self)
-    #
-    # Do pop and update the counter.
-    #
+
 
 
 stk = CountingStack()
